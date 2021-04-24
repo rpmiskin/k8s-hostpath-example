@@ -2,7 +2,7 @@
 
 This repo is a based on a run through of [Configure a Pod to Use a PersistentVolume for Storage](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/).
 
-This makes it easier to tinker with the files...
+It uses a local yaml files, rather than pulling from the Kubernetes website. This makes it easier to tinker with the files...
 
 I've run it using the k8s that is installed by Docker Desktop for Mac. In this
 scenario the host is a VM running on the Mac, but some host folders are
