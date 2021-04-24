@@ -15,7 +15,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/Users/richardmiskin/Development/k8s-pvc/mnt/data"
+    path: "/Users/richardmiskin/Development/k8s-pvc/data"
 
 ---
 apiVersion: v1

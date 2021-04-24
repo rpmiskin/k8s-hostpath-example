@@ -9,7 +9,7 @@ scenario the host is a VM running on the Mac, but some host folders are
 made available via
 [File Sharing](https://docs.docker.com/docker-for-mac/#file-sharing).
 So rather than following the instructions to create `/mnt/data`
-there is a `mnt/data` folder within this repo and the [definition](./pv-volume.yaml) requires an absolute path. _This will need to be
+there is a `data` folder within this repo and the [definition](./pv-volume.yaml) requires an absolute path. _This will need to be
 updated to run the example_.
 
 Once you have modified the path simply deploy using:
