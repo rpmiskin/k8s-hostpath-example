@@ -19,18 +19,29 @@ kubectl apply -f ./pv-volume.yaml
 ```
 
 Once everything has started you should then be able to access nginx with the following command:
+
 ```
 curl http://localhost:30080
 ```
-The response is the contents of `./mnt/data/index.html` if you change this file and invoke `curl` again the data will change.
 
-Cleanup
--------
+The response should be `Hello from k8s storage` - this is the contents of `./data/index.html`.
+If you run the following commands the response should change, demonstrating your container is
+serving local files.
+
+```
+echo "And another thing..." >> ./data/index.html
+curl http://localhost:30080
+```
+
+## Cleanup
+
 Run the following commands to clean up the items deployed by this script:
+
 ```
 kubectl delete svc task-pv-service
 kubectl delete pod task-pv-pod
 kubectl delete pvc task-pv-claim
 kubectl delete pv task-pv-volume
 ```
+
 Alternatively you can run the `cleanup.sh` script.
